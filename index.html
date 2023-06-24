@@ -4,10 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <link rel="icon" href="icon.ico">
-
-
+  <link rel="icon" href="img/icon.ico">
   <title>Valorem Health</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -27,18 +24,6 @@
     , crossorigin="anonymous">
   <link rel="stylesheet" href="style.css">
 
-
-  <script>
-    function activateNavLink(e) {
-      var elems = document.querySelector(".active");
-      if (elems !== null) {
-        elems.classList.remove("active");
-      }
-      if (e !== undefined)
-        e.target.className = "nav-item active";
-    }
-  </script>
-
 </head>
 
 <body>
@@ -46,32 +31,36 @@
 
 
   <header>
-    <div class="position-fixed top-0 start-0 w-100 navbar-header"
-      style="z-index: 100; height: 45px;
+    <div class="position-fixed top-0 start-0 w-100 navbar-header" style="z-index: 100;
       ">
-      <div class="container">
-        <nav>
+      <div class="">
+        <nav class="nav">
 
-          <div class="d-flex flex-nowrap white-space-nowrap
-          align-items-end gap-2 gap-md-4 gap-lg-5 justify-content-start"
-          style="overflow-x: auto;"
-          >
-
-            <a role="button" href="/#" onClick="activateNavLink()">
+          <div class="d-flex flex-wrap flex-md-nowrap white-space-nowrap container-md
+          align-items-end gap-2 gap-md-4 gap-lg-5 justify-content-center justify-content-md-start"
+            style="">
+            <a role="button" href="/#" 
+            id="nav-home"
+            >
               <img src="img/vh-logo-text.svg" loading="lazy" alt=""
                 style="height: 45px; ">
             </a>
-
-            <a role="button" class="nav-item" href="#solutions"
-              onClick="activateNavLink(event)">Solutions</a>
+            <a role="button" class="nav-item" 
+            id="nav-solutions",
+            href="#solutions"
+              >Solutions</a>
             <a role="button" class="nav-item" href="#usecases"
-              onClick="activateNavLink(event)">Use cases</a>
+            id="nav-usecases",
+              >Use cases</a>
             <a role="button" class="nav-item" href="#research"
-              onClick="activateNavLink(event)">Research</a>
+            id="nav-research"
+              >Research</a>
             <a role="button" class="nav-item" href="#about"
-              onClick="activateNavLink(event)">About</a>
+            id="nav-about"
+              >About</a>
             <a role="button" class="nav-item" href="#contact"
-              onClick="activateNavLink(event)">Contact</a>
+            id="nav-contact"
+              >Contact</a>
 
 
 
@@ -94,7 +83,7 @@
                 class="hero py-5 text-center d-flex flex-column justify-content-center align-items-center">
 
 
-                <div class="pt-5 pb-5 display-6 source fw-bold">
+                <div class="pb-5 display-6 source fw-bold" style="padding-top: 100px;">
                   A state-of-the-art software platform for capturing patient
                   experiences throughout the medical product lifecycle.
                 </div>
@@ -127,89 +116,122 @@
               </div>
             </div>
           </div>
-          
-        </section>
-        <div class="bottom-clip bg-beige"></div>
 
-    <section id="solutions" class="pb-5 mb-5">
+    </section>
+    <div class="bottom-clip bg-beige"></div>
 
-      <div 
-      class="container mw-100" 
-      style="margin-top: min(30vw, 250px);"
-      >
+    <section id="solutions" class="pt-3 pb-5 my-5">
 
-      <h2>Solutions</h2>
-      <div class="d-flex align-items-start gap-5">
+      <div class="container mw-100 px-2 px-sm-3 px-xl-0"
+        style="margin-top: min(30vw, 250px);">
 
-        <div class="w-50 fs-5">
-          <p>
-            The Valorem health platform provides a comprehensive suite of software tools to capture, analyse, and visualise patient preferences and experiences. Our applications are: 
-          </p>
-          <ul>
-            <li class="pb-1">
-              web-based, mobile-friendly, and designed to be intuitive and easy to use. 
-            </li>
-            <li class="pb-1">
-              secure and compliant with industry standards (HIPAA, GDPR, etc.).
-            </li>
-            <li class="pb-1">
-            designed to be scalable and flexible, to easily integrate with existing systems and processes
-          </li>
-        </ul>
-      </div>
-      
-      <div class="w-50 d-flex flex-column justify-content-center align-items-center">
-        <img src="img/awsArchitecture.png" alt=""
-        height="300px" width="auto"
-        >
-        <div class="d-flex gap-3 mt-3">
-          <div class="border p-1">Cert 1</div> 
-          <div class="border p-1">Cert 2</div> 
-          <div class="border p-1">Cert 3</div> 
+        <h2>Solutions</h2>
+        <div class="d-flex flex-wrap flex-md-nowrap align-items-start gap-5">
+
+          <div class="w-100 w-md-50 fs-5">
+            <p>
+              The Valorem health platform provides a comprehensive suite of
+              software tools to capture, analyse, and visualise patient
+              preferences and experiences. </p>
+              <p>Our applications are:</p>
+            <ul>
+              <li class="pb-1">
+                web-based, mobile-friendly, and designed to be intuitive and
+                easy to use.
+              </li>
+              <li class="pb-1">
+                secure and compliant with industry standards (HIPAA, GDPR,
+                etc.).
+              </li>
+              <li class="pb-1">
+                designed to be scalable and flexible, to easily integrate with
+                existing systems and processes
+              </li>
+            </ul>
+          </div>
+
+          <div
+            class="w-100 w-md-50 d-flex flex-column justify-content-center align-items-center">
+            <img src="img/awsArchitecture.png" alt="" height="300px"
+              width="auto">
+            <div class="d-flex flex-wrap flex-md-nowrap gap-3 mt-3 justify-content-center align-items-center">
+              
+              <div class="img-fluid" style="height: 30px; width: auto;">
+                <img src="img/aws.png" loading="lazy alt="" height="30px" width="auto">
+              </div>
+              
+              <div class="img-fluid" style="height: 70px; width: auto;">
+                <img src="img/cert1.png" loading="lazy alt="" height="70px" width="auto">
+              </div>
+
+              <div class="img-fluid" style="height: 40px; width: auto;">
+                <img src="img/cert2.png" loading="lazy alt="" height="40px" width="auto">
+              </div>
+
+              <div class="img-fluid" style="height: 40px; width: auto;">
+                <img src="img/cert3.jpg" 
+                loading="lazy
+                alt="" height="40px" width="auto">
+              </div>
+              
+
+            </div>
+          </div>
 
         </div>
+
       </div>
-      
-    </div>
-    
-  </div>
 
     </section>
 
 
-    <div class="top-clip bg-light-blue"></div>
-    <section id="usecases" class="bg-light-blue">
-      <div class="container mw-80 py-5 fs-5">
+    <div style="margin-bottom: -1px;" class="top-clip bg-light-blue"></div>
+    <section id="usecases" class="bg-light-blue pt-5">
+      <div class="container mw-80 py-5 fs-5 px-2 px-sm-3 px-xl-0">
 
 
         <h2>Use cases</h2>
-        <div class="d-flex flex-column gap-5"> 
+        <div class="d-flex flex-column gap-5 ">
 
-          
+
           <!-- case 1 -->
-          <div class="d-flex align-items-center justify-content-between">
-            <div class="col-6" >
+          <div
+            class="d-flex flex-wrap flex-md-nowrap  align-items-center justify-content-between">
+            <div class="col-12 col-md-6">
               <h3>#1 Capture patient experiences in (early) clinical trial</h3>
               <p>
-                Understanding what matters to patient is important at any stage of the medical product lifecycle. It can inform, for example, product development, trial design, or regulatory decisions. Methods such as Multi-dimensional Thresholding (MDT), or Swing Weighting allow us to assess patient preferences for benefit-risk assessment even in early clinical trials.
+                Understanding what matters to patient is important at any stage
+                of the medical product lifecycle. It can inform, for example,
+                product development, trial design, or regulatory decisions.
+                Methods such as Multi-dimensional Thresholding (MDT), or Swing
+                Weighting allow us to assess patient preferences for
+                benefit-risk assessment even in early clinical trials.
               </p>
             </div>
-            <div class="flex-fill d-flex flex-column align-items-center col-6" >
+            <div
+              class="flex-fill d-flex flex-column align-items-center col-12 col-md-6">
               <img src="img/case1.png" alt="" class="" loading="lazy">
             </div>
           </div>
 
 
           <!-- case 2 -->
-          <div class="d-flex align-items-start justify-content-between">
-            <div class="col-6 mt-3" >
+          <div
+            class="d-flex flex-wrap flex-md-nowrap align-items-start justify-content-between">
+            <div class="col-12 col-md-6 mt-3">
               <h3>#2 Value assessment</h3>
               <p>
-                Valuing health outcomes (EQ-5D, SF-6D, etc.) is an essential component in health technology assessment. In addition to standard valuation methods, such as time trade-off, we offer Online elicitation of Personal Utility Functions (OPUF), which allows capturing (patient) preferences with small sample sizes and even on the level of the individual patient. 
+                Valuing health outcomes (EQ-5D, SF-6D, etc.) is an essential
+                component in health technology assessment. In addition to
+                standard valuation methods, such as time trade-off, we offer
+                Online elicitation of Personal Utility Functions (OPUF), which
+                allows capturing (patient) preferences with small sample sizes
+                and even on the level of the individual patient.
               </p>
             </div>
-            <div class="d-flex flex-column align-items-start col-6" >
-              <img src="img/case2.png" alt="" class=""  width="100%" loading="lazy">
+            <div class="d-flex flex-column align-items-start col-12 col-md-6">
+              <img src="img/case2.png" alt="" class="" width="100%"
+                loading="lazy">
             </div>
           </div>
 
@@ -217,126 +239,167 @@
 
 
           <!-- case 3 -->
-          <div class="d-flex align-items-start justify-content-between">
-            <div class="col-6 mt-3" >
+          <div
+            class="d-flex flex-wrap flex-md-nowrap  align-items-start justify-content-between">
+            <div class="col-12 col-md-6 mt-3">
               <h3>#3 Patient engagement</h3>
               <p>
-                We offer a range of tools to engage patients in research or policy decisions. Our survey platform can be used, for example, to support patient advisory board discussion with real-time capture and visualisation of patient preferences and priorities. 
+                We offer a range of tools to engage patients in research or
+                policy decisions. Our survey platform can be used, for example,
+                to support patient advisory board discussion with real-time
+                capture and visualisation of patient preferences and priorities.
               </p>
             </div>
-            <div class="d-flex flex-column align-items-center col-6" >
-              <img src="img/case3.png" alt="" class=""  width="100%" loading="lazy">
+            <div class="d-flex flex-column align-items-center col-12 col-md-6">
+              <img src="img/case3.png" alt="" class="" width="100%"
+                loading="lazy">
             </div>
           </div>
 
 
           <!-- case 4 -->
-          <div class="d-flex align-items-start justify-content-between">
-            <div class="col-6 mt-3" >
+          <div
+            class="d-flex flex-wrap flex-md-nowrap align-items-start justify-content-between">
+            <div class="col-12 col-md-6 mt-3">
               <h3>#4 Your use case</h3>
               <p>
-                We are committed to working with our customers to develop solutions tailored to their specific needs. Please contact us to discuss your project and find out how we can help.               </p>
+                We are committed to working with our customers to develop
+                solutions tailored to their specific needs. Please contact us to
+                discuss your project and find out how we can help. </p>
             </div>
-            <div class="d-flex flex-column align-items-center col-6" >
-              <img src="img/case4.png" alt="" class=""  width="80%" loading="lazy">
+            <div class="d-flex flex-column align-items-center col-12 col-md-6">
+              <img src="img/case4.png" alt="" class="" width="80%"
+                loading="lazy">
             </div>
           </div>
 
 
         </div>
-        
+
       </div>
 
     </section>
 
-    <div class="bottom-clip bg-light-blue"></div>
+    <div style="margin-top: -1px;" class="bottom-clip bg-light-blue"></div>
 
 
     <section id="research" class="bg-white">
 
-      
-        <div class="container mw-60 py-5 fs-5">
-  
-  
-          <h2>Research</h2>
-          <p>We do methodological research and regularly contribute to scientific publications, panels, and workshops. We have published in leading journals such as Health Economics, Value in Health, or ...</p><p>
 
-            If you have an idea for a research project, or if you would like to use our software for your research, please do get in touch – we offer significant discounts for academics and are keen to collaborate on interesting projects. </p>
-          <div class="py-4"> 
-            <h3>Our research in the spotlight</h3>
-            <div class="reference">Tervonen, T., F. Pignatti, and D. Postmus. 2019. 'From Individual to Population Preferences: Comparison of Discrete Choice and Dirichlet Models for Treatment Benefit-Risk Tradeoffs', Med Decis Making, 39: 879-85.</div>
-            <div class="reference">Schneider PP, van Hout B, Heisen M, Brazier J, Devlin N. The Online Elicitation of Personal Utility Functions (OPUF) tool: a new method for valuing health states. Wellcome Open Research. 2022 Jan 14;7:14.
-            </div>
-            <div class="reference">Fox, R.J., Tervonen T., Phillips-Beyer, A., Sidorenko, T., Boyanova, N., Brooks, A. Hennessy, B., Jamieson C., Levitan, B. 2022. ‘The relevance of fatigue to relapse rate in multiple sclerosis: applying patient preference data to the OPTIMUM trial’, Mult Scler J.</div>
-            <div class="reference">Schneider PP. Social tariffs and democratic choice—Do population‐based health state values reflect the will of the people?. Health Economics. 2021 Jan;30(1):104-12.</div>
-            
-            <div class="fw-bold mt-4 ">Contact us for a full list of our publications.</div>
+      <div class="container mw-60 py-5 fs-5 px-2 px-sm-3 px-xl-0">
 
-  
+
+        <h2>Research</h2>
+        <p>We do methodological research and regularly contribute to scientific
+          publications, panels, and workshops. We have published in leading
+          journals such as Health Economics, Value in Health, and Medical Decision Making. </p>
+        <p>
+
+          If you have an idea for a research project, or if you would like to
+          use our software for your research, please do get in touch – we offer
+          significant discounts for academics and are keen to collaborate on
+          interesting projects. </p>
+        <div class="py-4">
+          <h3>Our research in the spotlight</h3>
+          <div class="reference">Tervonen, T., F. Pignatti, and D. Postmus.
+            2019. 'From Individual to Population Preferences: Comparison of
+            Discrete Choice and Dirichlet Models for Treatment Benefit-Risk
+            Tradeoffs', Med Decis Making, 39: 879-85.</div>
+          <div class="reference">Schneider PP, van Hout B, Heisen M, Brazier J,
+            Devlin N. The Online Elicitation of Personal Utility Functions
+            (OPUF) tool: a new method for valuing health states. Wellcome Open
+            Research. 2022 Jan 14;7:14.
           </div>
+          <div class="reference">Fox, R.J., Tervonen T., Phillips-Beyer, A.,
+            Sidorenko, T., Boyanova, N., Brooks, A. Hennessy, B., Jamieson C.,
+            Levitan, B. 2022. ‘The relevance of fatigue to relapse rate in
+            multiple sclerosis: applying patient preference data to the OPTIMUM
+            trial’, Mult Scler J.</div>
+          <div class="reference">Schneider PP. Social tariffs and democratic
+            choice—Do population‐based health state values reflect the will of
+            the people?. Health Economics. 2021 Jan;30(1):104-12.</div>
+
+          <div class="fw-bold mt-4 ">Contact us for a full list of our
+            publications.</div>
+
+
         </div>
+      </div>
 
     </section>
 
-    <div class="top-clip bg-beige"></div>
+    <div style="margin-bottom: -1px;" class="top-clip bg-beige"></div>
 
     <section id="about" class="bg-beige">
       <div class="container mw-80 py-5">
         <h2>About us</h2>
         <div class="mw-60 fs-5">
-          <p>The patient's perspective should be at the center of decision making in clinical care, health policy, and medical product development. For this, relevant patient preference information needs to be much more widely available. It then just doesn't make sense that collecting  patient preference studies is so difficult, costly, and time consuming... </p>
-          <p class="fw-bold">Our mission is to make it easy for organisations to capture, analyse, and visualise patient preferences at any stage of the medical product lifecycle.</p>
+          <p>The patient's perspective should be at the center of decision
+            making in clinical care, health policy, and medical product
+            development. For this, relevant patient preference information needs
+            to be much more widely available. It then just doesn't make sense
+            that collecting patient preference studies is so difficult, costly,
+            and time consuming... </p>
+          <p class="fw-bold">Our mission is to make it easy for organisations to
+            capture, analyse, and visualise patient preferences at any stage of
+            the medical product lifecycle.</p>
         </div>
 
-        <div class="d-flex justify-content-evenly py-3">
-          
-          
+        <div class="d-flex flex-wrap  justify-content-evenly py-3">
+
+
           <!-- Tommi -->
-          <div class="border px-3 py-3 bg-white">
-            <img src="img/avatar.png" alt="" class="avatar">
-            <div>
-              Dr Tommi Tervonen
+          <div class="border px-5 pb-4 bg-white mb-3 rounded-3 shadow text-center " style="margin-top: 120px;">
+            <img src="img/tommi.png" alt="Avatar" class="avatar border" style="margin-top: -80px;">
+            <div class="py-2 lh-sm">
+              <div class="pb-1 fs-5">
+                Dr Tommi Tervonen
+              </div>
+              <div class="">
+                
+              </div>
             </div>
-            <div>
-              Title
-            </div>
-            <div>
+            <div class="d-flex justify-content-center gap-3">
               <a href="mailto:tervonen@valorem.health">
-                tervonen@valorem.health</a>
-            </div>
-            <div>
-              <a href="https://www.linkedin.com/in/xxx/">LinkedIn</a>
+              <img src="img/envelop.svg" height="22px" class="filter-primary">
+                </a>
+              <a href="https://www.linkedin.com/in/tommitervonen/">
+              <img src="img/linkedin.svg" height="20px" class="filter-primary">
+                </a>
             </div>
           </div>
 
 
           <!-- Paul -->
-          <div class="border px-3 py-3 bg-white">
-            <img src="img/avatar.png" alt="" class="avatar">
-            <div>
-              Dr Paul Schneider
+          <div class="border px-5 pb-4 bg-white mb-3 rounded-3 shadow text-center " style="margin-top: 120px;">
+            <img src="img/paul.png" alt="Avatar" class="avatar border" style="margin-top: -80px;">
+            <div class="py-2 lh-sm">
+              <div class="pb-1 fs-5">
+                Dr Paul Schneider
+              </div>
+              <div class="">
+                
+              </div>
             </div>
-            <div>
-              Title
-            </div>
-            <div>
+            <div class="d-flex justify-content-center gap-3">
               <a href="mailto:schneider@valorem.health">
-                schneider@valorem.health</a>
-            </div>
-            <div>
-              <a href="https://www.linkedin.com/in/xxx/">LinkedIn</a>
+              <img src="img/envelop.svg" height="22px" class="filter-primary">
+                </a>
+              <a href="https://www.linkedin.com/in/paul-schneider-204345131/">
+              <img src="img/linkedin.svg" height="20px" class="filter-primary">
+                </a>
             </div>
           </div>
-          
 
 
-
-
-        </div>
 
 
 
         </div>
+
+
+
+      </div>
     </section>
 
     <div class="bottom-clip bg-beige"></div>
@@ -345,7 +408,8 @@
       <div class="container mw-80 py-5">
         <h2>Contact</h2>
         <div class="mw-60 fs-5">
-          <p>Get in touch to discuss your project and find out how we can help.</p>
+          <p>Get in touch to discuss your project and find out how we can help.
+          </p>
 
           <div class="fw-bold">Valorem health GmbH</div>
           <div>Gewerkenstr 8</div>
@@ -353,7 +417,7 @@
 
 
           <p class=""><a href="mailto:contact@valorem.health">
-            contact@valorem.health</a></p>
+              contact@valorem.health</a></p>
         </div>
       </div>
     </section>
@@ -362,55 +426,67 @@
   </main>
 
 
-  <footer>
-    <div class="w-100 border-top bg-beige">
-      <div class="container py-3">
-      <div class="d-flex justify-content-evenly align-items-center">
+  <footer class="bg-beige border-top shadow">
+
+
+    <div class="container py-4">
         
-        <div class=" px-2">
-          <img src="img/favicon.png" alt="" height="120px">
+      <div class="d-flex flex-wrap flex-md-nowrap justify-content-start align-items-start">
+
+         
+        <div class=" pe-3 mb-3">
+            <img src="img/favicon.png" alt="" height="120px">
+          </div>
+
+          <div class="lh-sm me-auto">
+            <div class="fw-bold pb-1">
+              Valorem health GmbH
+            </div>
+            <div>
+              Gewerkenstr 8
+            </div>
+            <div>
+              44805 Bochum, Germany
+            </div>
+            <a href="mailto:contact@valorem.health">
+              contact@valorem.health</a>
+            <div>
+              HRB 20709, Amtsgericht Bochum.
+            </div>
+          </div>
+
+
+          <div class="d-flex flex-column px-3 lh-sm me-auto mb-3">
+          <a class="text-dark" href="#home">Home</a>
+          <a class="text-dark" href="#solutions">Solutions</a>
+          <a class="text-dark" href="#usecases">Use cases</a>
+          <a class="text-dark" href="#research">Research</a>
+          <a class="text-dark" href="#about">About</a>
+          <a class="text-dark" href="#contact">Contact</a>
         </div>
 
-        <div class="small lh-sm">
-          <div class="fw-bold pb-1">
-            Valorem health GmbH
-          </div>
-          <div>
-            Gewerkenstr 8
-          </div>
-          <div>
-            44805 Bochum, Germany
-          </div>
-<a href="mailto:contact@valorem.health">
-  contact@valorem.health</a>
-  <div>
-    HRB 20709, Amtsgericht Bochum.
-  </div>
 
+          <div class="ms-auto ps-4">
+            <span
+              class="text-decoration-underline text-secondary small">Network:</span>
+            <div class="d-md-flex flex-wrap  gap-1 gap-lg-3 align-items-center w-100">
+              <img src="img/network-logo-1.png" alt="" height="70px">
+              <img src="img/network-logo-2.png" alt="" height="70px" class="">
+              <img src="img/network-logo-3.png" alt="" class="pt-2"
+                height="40px">
+            </div>
+          </div>
         </div>
-
-
-        <!-- <div class="d-flex flex-column">
-          <a href="#home">Home</a>
-          <a href="#services">Services</a>
-          <a href="#research">Research</a>
-          <a href="#about">About</a>
-          <a href="#contact">Contact</a>
-        </div> -->
-
-
-        <div class="d-none d-md-block">
-          <span class="text-decoration-underline text-secondary small">Network:</span>
-        <div class="d-md-flex gap-1 gap-lg-3 align-items-center">
-          <img src="img/network-logo-1.png" alt="" height="80px">
-          <img src="img/network-logo-2.png" alt="" height="80px" class="">
-          <img src="img/network-logo-3.png" alt="" class="pt-2" height="50px">
-        </div>
-      </div>
-      </div>
+      
     </div>
-  </div>
+    
+    <div class="small text-secondary pb-2 ps-4">
+      &copy; Valorem health 2023. All Rights Reserved.
+    </div>
+
   </footer>
+  
+  <script src="highlightCurrentNav.js"></script>
 
 
 

@@ -50,6 +50,9 @@ h3 {
 .btn-primary:hover {
   outline: #ff5a46 !important;
   box-shadow: 0 0 0 0.2rem rgba(255, 90, 70, 0.5) !important;
+  color: white !important;
+  transform: scale(1.05);
+  transition: all 0.2s ease-in-out;
 }
 .w-75 {
   width: 75%;
